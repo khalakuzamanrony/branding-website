@@ -12,30 +12,42 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #272829;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #050d18;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #149ddd;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --accent-color: #00b91f;
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #a8a9b4;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #040b14; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #a8a9b4;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #ffffff;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #040b14;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #040b14;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #a8a9b4;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #ffffff;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -554,15 +566,21 @@ section,
 }
 
 .hero .container {
-  max-width: 50%;
+  max-width: 55%;
   /* right: 350px; */
   top: 150px;
-  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
-  backdrop-filter: blur(5px); /* Blur effect */
-  padding: 20px 40px; /* Adjust padding as needed */
-  border-radius: 10px; /* Rounded corners */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Light border for a glass effect */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background: rgba(255, 255, 255, 0.2);
+  /* Semi-transparent white background */
+  backdrop-filter: blur(5px);
+  /* Blur effect */
+  padding: 20px 40px;
+  /* Adjust padding as needed */
+  border-radius: 10px;
+  /* Rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Light border for a glass effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
   position: relative;
   z-index: 3;
 }
@@ -572,6 +590,12 @@ section,
   font-size: 64px;
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.hero .rony {
+  color: var(--accent-color);
+  text-transform: uppercase;
 }
 
 .hero p {
@@ -633,15 +657,21 @@ section,
   color: var(--accent-color);
   line-height: 0;
 }
+
 .about .about-image {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur, color */
-  border-radius: 10px; /* Optional: Adds rounded corners */
-  transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Horizontal offset, vertical offset, blur, color */
+  border-radius: 10px;
+  /* Optional: Adds rounded corners */
+  transition: box-shadow 0.3s ease;
+  /* Smooth transition for hover effect */
 }
 
 .about-image:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  /* Larger shadow on hover */
 }
+
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
@@ -738,13 +768,15 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 10px;
 }
+
 .resume .resume-item .pos {
   font-size: 17px;
-    padding: 0px 5px;
-    margin-top: 14px;
-    text-transform: capitalize;
+  padding: 0px 5px;
+  margin-top: 14px;
+  text-transform: capitalize;
 
 }
+
 .resume .resume-item .loc {
   padding: 0px 5px;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
@@ -1277,6 +1309,7 @@ section,
     left: -100%;
   }
 }
+
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
@@ -1284,16 +1317,19 @@ section,
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
-  .cpx{
+
+  .cpx {
     padding: 0px 15px;
   }
 }
+
 @media (max-width: 575px) {
   .portfolio .portfolio-filters li {
     font-size: 14px;
     margin: 0 5px;
   }
 }
+
 @media (max-width: 575px) {
   .contact .info-wrap {
     padding: 20px;
@@ -1305,38 +1341,47 @@ section,
     padding: 20px;
   }
 }
+
 @media (max-width: 768px) {
   .hero .container {
     max-width: 90%;
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
-    backdrop-filter: blur(5px); /* Blur effect */
-    padding: 20px 40px; /* Adjust padding as needed */
-    border-radius: 10px; /* Rounded corners */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for a glass effect */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background: rgba(255, 255, 255, 0.2);
+    /* Semi-transparent white background */
+    backdrop-filter: blur(5px);
+    /* Blur effect */
+    padding: 20px 40px;
+    /* Adjust padding as needed */
+    border-radius: 10px;
+    /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Light border for a glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
     position: relative;
     z-index: 3;
     right: 0px;
   }
-  
+
   .hero h2 {
 
     font-size: 80px;
-
     text-align: center;
-  }
-  .hero h2 {
     font-size: 32px;
+  }
+
+  .hero .rony {
+    font-size: 5rem;
   }
 
   .hero p {
     font-size: 20px;
   }
-  .btn-mbl{
+
+  .btn-mbl {
     gap: 10px;
   }
+
   .resume .resume-item::before {
     top: 0px;
   }
 }
-
