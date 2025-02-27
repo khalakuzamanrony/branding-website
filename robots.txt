@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://iamrony.netlify.app/sitemap.xml
