@@ -27,8 +27,9 @@
   /* Color for headings, subheadings and title throughout the website */
   --accent-color: #149ddd;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --accent-color: #00b91f;
-  --surface-color: #ffffff;
+  --accent-color: #ff652f;
+  --accent-color: #11823b;
+  --surface-color: #020202;
   /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff;
   /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -216,6 +217,9 @@ h6 {
 .header .social-links a:hover {
   color: var(--contrast-color);
   background: var(--accent-color);
+}
+.header .deg {
+  color: var(--accent-color);
 }
 
 
@@ -671,6 +675,14 @@ section,
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   /* Larger shadow on hover */
 }
+.about .btn-bg1{
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+.about .btn-bg2{
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
 
 /*--------------------------------------------------------------
 # Stats Section
@@ -740,6 +752,7 @@ section,
   height: 10px;
   transition: 0.9s;
   background-color: var(--accent-color);
+  opacity: 50%;
 }
 
 /*--------------------------------------------------------------
@@ -1078,7 +1091,7 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-wrap {
-  background-color: var(--surface-color);
+  background-color: var(--background-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
 }
@@ -1122,7 +1135,7 @@ section,
 }
 
 .contact .php-email-form {
-  background-color: var(--surface-color);
+  background-color: var(--background-color);
   height: 100%;
   padding: 30px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -1137,7 +1150,7 @@ section,
   box-shadow: none;
   border-radius: 0;
   color: var(--default-color);
-  background-color: var(--surface-color);
+  background-color: var(--background-color);
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
