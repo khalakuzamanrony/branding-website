@@ -1955,8 +1955,11 @@
 
             <div class="col-lg-7">
               <form
+              name="contact" netlify
                 action="forms/contact.php"
+                data-netlify="true"
                 method="post"
+                onSubmit={handleSubmit}
                 class="php-email-form"
                 data-aos="fade-up"
                 data-aos-delay="200"
