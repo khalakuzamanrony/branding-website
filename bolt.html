@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional WordPress Developer - Custom websites, plugins, and maintenance services. Transform your business with expert WordPress solutions."
+    />
+    <meta
+      name="keywords"
+      content="WordPress developer, custom WordPress, WordPress plugins, WordPress maintenance, web development"
+    />
+    <title>Alex Morgan - WordPress Expert & Developer</title>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <style>
+      /* CSS Variables for Theme System */
+      :root {
+        --color-dark: #0f1419;
+        --color-dark-secondary: #1a1f2e;
+        --color-primary: #10b981;
+        --color-secondary: #059669;
+        --color-accent: #06d6a0;
+        --color-success: #22c55e;
+        --color-warning: #f59e0b;
+        --color-error: #ef4444;
+        --color-white: #ffffff;
+        --color-gray-100: #f3f4f6;
+        --color-gray-200: #e5e7eb;
+        --color-gray-300: #d1d5db;
+        --color-gray-400: #9ca3af;
+        --color-gray-500: #6b7280;
+        --color-gray-600: #4b5563;
+        --color-gray-700: #374151;
+        --color-gray-800: #1f2937;
+        --color-gray-900: #111827;
+      }
+
+      /* Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "Roboto", sans-serif;
+        line-height: 1.5;
+        scroll-behavior: smooth;
+        background-color: var(--color-dark);
+        color: white;
+      }
+
+      /* Utility Classes */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+      .text-left {
+        text-align: left;
+      }
+      .text-right {
+        text-align: right;
+      }
+
+      .flex {
+        display: flex;
+      }
+      .flex-col {
+        flex-direction: column;
+      }
+      .items-center {
+        align-items: center;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+      .justify-between {
+        justify-content: space-between;
+      }
+      .space-x-4 > * + * {
+        margin-left: 1rem;
+      }
+      .space-x-8 > * + * {
+        margin-left: 2rem;
+      }
+      .space-y-2 > * + * {
+        margin-top: 0.5rem;
+      }
+      .space-y-3 > * + * {
+        margin-top: 0.75rem;
+      }
+      .space-y-6 > * + * {
+        margin-top: 1.5rem;
+      }
+      .space-y-8 > * + * {
+        margin-top: 2rem;
+      }
+
+      .grid {
+        display: grid;
+      }
+      .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .gap-4 {
+        gap: 1rem;
+      }
+      .gap-6 {
+        gap: 1.5rem;
+      }
+      .gap-8 {
+        gap: 2rem;
+      }
+      .gap-12 {
+        gap: 3rem;
+      }
+
+      .w-full {
+        width: 100%;
+      }
+      .h-full {
+        height: 100%;
+      }
+      .min-h-screen {
+        min-height: 100vh;
+      }
+
+      .p-4 {
+        padding: 1rem;
+      }
+      .p-6 {
+        padding: 1.5rem;
+      }
+      .p-8 {
+        padding: 2rem;
+      }
+      .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .py-3 {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+      }
+      .py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      .py-8 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+      .py-16 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+      .py-20 {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+
+      .m-4 {
+        margin: 1rem;
+      }
+      .mb-4 {
+        margin-bottom: 1rem;
+      }
+      .mb-6 {
+        margin-bottom: 1.5rem;
+      }
+      .mb-8 {
+        margin-bottom: 2rem;
+      }
+      .mb-16 {
+        margin-bottom: 4rem;
+      }
+      .mr-3 {
+        margin-right: 0.75rem;
+      }
+      .mr-4 {
+        margin-right: 1rem;
+      }
+      .mt-1 {
+        margin-top: 0.25rem;
+      }
+
+      .rounded-lg {
+        border-radius: 0.5rem;
+      }
+      .rounded-xl {
+        border-radius: 0.75rem;
+      }
+      .rounded-2xl {
+        border-radius: 1rem;
+      }
+      .rounded-full {
+        border-radius: 9999px;
+      }
+
+      .border {
+        border-width: 1px;
+      }
+      .border-2 {
+        border-width: 2px;
+      }
+      .border-gray-600 {
+        border-color: var(--color-gray-600);
+      }
+      .border-gray-700 {
+        border-color: var(--color-gray-700);
+      }
+      .border-gray-800 {
+        border-color: var(--color-gray-800);
+      }
+      .border-primary {
+        border-color: var(--color-primary);
+      }
+
+      .bg-dark {
+        background-color: var(--color-dark);
+      }
+      .bg-dark-secondary {
+        background-color: var(--color-dark-secondary);
+      }
+      .bg-primary {
+        background-color: var(--color-primary);
+      }
+      .bg-transparent {
+        background-color: transparent;
+      }
+
+      .text-primary {
+        color: var(--color-primary);
+      }
+      .text-secondary {
+        color: var(--color-secondary);
+      }
+      .text-white {
+        color: white;
+      }
+      .text-gray-200 {
+        color: var(--color-gray-200);
+      }
+      .text-gray-300 {
+        color: var(--color-gray-300);
+      }
+      .text-gray-400 {
+        color: var(--color-gray-400);
+      }
+
+      .text-sm {
+        font-size: 0.875rem;
+      }
+      .text-lg {
+        font-size: 1.125rem;
+      }
+      .text-xl {
+        font-size: 1.25rem;
+      }
+      .text-2xl {
+        font-size: 1.5rem;
+      }
+      .text-4xl {
+        font-size: 2.25rem;
+      }
+      .text-5xl {
+        font-size: 3rem;
+      }
+
+      .font-bold {
+        font-weight: 700;
+      }
+      .font-semibold {
+        font-weight: 600;
+      }
+      .font-medium {
+        font-weight: 500;
+      }
+
+      .leading-relaxed {
+        line-height: 1.625;
+      }
+
+      .shadow-lg {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      .shadow-xl {
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+
+      .transition-all {
+        transition: all 0.3s ease;
+      }
+      .transform {
+        transform: translateZ(0);
+      }
+      .hover\:scale-105:hover {
+        transform: scale(1.05);
+      }
+      .hover\:scale-110:hover {
+        transform: scale(1.1);
+      }
+
+      .relative {
+        position: relative;
+      }
+      .absolute {
+        position: absolute;
+      }
+      .inset-0 {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      .-top-4 {
+        top: -1rem;
+      }
+      .left-1\/2 {
+        left: 50%;
+      }
+      .-translate-x-1\/2 {
+        transform: translateX(-50%);
+      }
+      .z-10 {
+        z-index: 10;
+      }
+      .-z-10 {
+        z-index: -10;
+      }
+
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .object-cover {
+        object-fit: cover;
+      }
+
+      .outline-none {
+        outline: none;
+      }
+      .resize-none {
+        resize: none;
+      }
+
+      /* Custom Components */
+      .btn-primary {
+        background: linear-gradient(
+          to right,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        color: white;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-primary:hover {
+        background: linear-gradient(
+          to right,
+          var(--color-secondary),
+          var(--color-primary)
+        );
+        transform: scale(1.05);
+        box-shadow: 0 0 5px var(--color-primary), 0 0 10px var(--color-primary),
+          0 0 15px var(--color-primary), 0 0 20px var(--color-primary);
+      }
+
+      .btn-secondary {
+        border: 2px solid var(--color-primary);
+        color: var(--color-primary);
+        background: transparent;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .btn-secondary:hover {
+        background: var(--color-primary);
+        color: var(--color-dark);
+        transform: scale(1.05);
+        box-shadow: 0 0 5px var(--color-secondary),
+          0 0 10px var(--color-secondary), 0 0 15px var(--color-secondary),
+          0 0 20px var(--color-secondary);
+      }
+
+      .hero-gradient {
+        background: linear-gradient(
+          135deg,
+          var(--color-dark) 0%,
+          var(--color-dark-secondary) 50%,
+          var(--color-dark) 100%
+        );
+      }
+
+      .text-gradient {
+        background: linear-gradient(
+          to right,
+          var(--color-primary),
+          var(--color-secondary)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .service-card,
+      .testimonial-card,
+      .pricing-card,
+      .project-card {
+        background: var(--color-dark);
+        border: 1px solid var(--color-gray-700);
+        border-radius: 0.75rem;
+        padding: 2rem;
+        transition: all 0.3s ease;
+      }
+
+      .service-card:hover,
+      .testimonial-card:hover,
+      .pricing-card:hover,
+      .project-card:hover {
+        border-color: var(--color-primary);
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2),
+          0 0 20px rgba(16, 185, 129, 0.1);
+      }
+
+      .pricing-card-featured {
+        border-color: var(--color-primary);
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3),
+          0 0 20px rgba(16, 185, 129, 0.2);
+      }
+
+      .social-icon {
+        width: 4rem;
+        height: 4rem;
+        border: 2px solid var(--color-gray-600);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        color: var(--color-gray-400);
+        text-decoration: none;
+      }
+
+      .social-icon:hover {
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+        transform: scale(1.1);
+        box-shadow: 0 0 5px var(--color-primary), 0 0 10px var(--color-primary),
+          0 0 15px var(--color-primary);
+      }
+
+      .social-linkedin:hover {
+        border-color: #3b82f6;
+        color: #3b82f6;
+        box-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6, 0 0 15px #3b82f6;
+      }
+
+      .social-twitter:hover {
+        border-color: #60a5fa;
+        color: #60a5fa;
+        box-shadow: 0 0 5px #60a5fa, 0 0 10px #60a5fa, 0 0 15px #60a5fa;
+      }
+
+      .social-instagram:hover {
+        border-color: #ec4899;
+        color: #ec4899;
+        box-shadow: 0 0 5px #ec4899, 0 0 10px #ec4899, 0 0 15px #ec4899;
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        background: var(--color-dark-secondary);
+        border: 1px solid var(--color-gray-600);
+        color: white;
+        outline: none;
+        transition: all 0.3s ease;
+      }
+
+      .form-input:focus {
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 1px var(--color-primary),
+          0 0 10px rgba(16, 185, 129, 0.3);
+      }
+
+      .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      .icon-lg {
+        width: 3rem;
+        height: 3rem;
+      }
+
+      .icon-xl {
+        width: 4rem;
+        height: 4rem;
+      }
+
+      /* Project Card Specific Styles */
+      .project-card {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .project-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .project-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          to bottom,
+          transparent 0%,
+          rgba(15, 20, 25, 0.9) 100%
+        );
+        opacity: 0;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: flex-end;
+        padding: 1.5rem;
+      }
+
+      .project-card:hover .project-overlay {
+        opacity: 1;
+      }
+
+      .project-tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+      }
+
+      .tech-tag {
+        background: var(--color-primary);
+        color: var(--color-dark);
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+
+      .project-links {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 1rem;
+      }
+
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--color-primary);
+        color: var(--color-primary);
+        text-decoration: none;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        transition: all 0.3s ease;
+      }
+
+      .project-link:hover {
+        background: var(--color-primary);
+        color: var(--color-dark);
+        transform: translateY(-2px);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .grid-cols-2,
+        .grid-cols-3 {
+          grid-template-columns: 1fr;
+        }
+
+        .text-5xl {
+          font-size: 2.5rem;
+        }
+
+        .text-4xl {
+          font-size: 2rem;
+        }
+
+        .service-card:hover,
+        .testimonial-card:hover,
+        .pricing-card:hover,
+        .project-card:hover {
+          transform: none;
+        }
+
+        .flex-col-mobile {
+          flex-direction: column;
+        }
+
+        .space-x-4-mobile > * + * {
+          margin-left: 0;
+          margin-top: 1rem;
+        }
+
+        .project-links {
+          flex-direction: column;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .md\:grid-cols-2 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .md\:grid-cols-3 {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .md\:text-7xl {
+          font-size: 4.5rem;
+        }
+        .md\:text-2xl {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .lg\:grid-cols-3 {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* Scrollbar Styling */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: var(--color-dark-secondary);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--color-primary);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-secondary);
+      }
+
+      /* Selection Colors */
+      ::selection {
+        background-color: var(--color-primary);
+        color: var(--color-dark);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-screen flex items-center justify-center px-4 py-20"
+    >
+      <div class="absolute inset-0 hero-gradient opacity-90"></div>
+      <div class="relative z-10 text-center container">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-gradient">
+          WordPress Expert
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-gray-300 leading-relaxed">
+          Transform your business with custom WordPress solutions that drive
+          results. From stunning websites to powerful plugins, I deliver
+          excellence every time.
+        </p>
+        <div
+          class="flex flex-col flex-col-mobile gap-4 justify-center space-x-4-mobile"
+        >
+          <button
+            class="btn-primary px-8 py-4 text-lg font-semibold rounded-lg"
+          >
+            Start Your Project
+          </button>
+          <button
+            class="btn-secondary px-8 py-4 text-lg font-semibold rounded-lg"
+          >
+            View My Work
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 px-4 bg-dark-secondary">
+      <div class="container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="flex justify-center">
+            <div class="relative">
+              <div
+                class="w-80 h-80 rounded-2xl overflow-hidden shadow-xl border border-primary/20"
+              >
+                <img
+                  src="https://images.pexels.com/photos/3779448/pexels-photo-3779448.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Alex Morgan - WordPress Developer"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl -z-10 opacity-75 blur-sm"
+              ></div>
+            </div>
+          </div>
+          <div>
+            <h2 class="text-4xl font-bold mb-6 text-primary">About Me</h2>
+            <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+              With over 8 years of WordPress development experience, I've helped
+              200+ businesses create powerful online presences. From small
+              startups to enterprise-level projects, I deliver custom solutions
+              that exceed expectations.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="flex items-center space-x-4">
+                <i data-lucide="award" class="icon text-primary"></i>
+                <span class="text-gray-200">8+ Years Experience</span>
+              </div>
+              <div class="flex items-center space-x-4">
+                <i data-lucide="clock" class="icon text-primary"></i>
+                <span class="text-gray-200">24/7 Available</span>
+              </div>
+              <div class="flex items-center space-x-4">
+                <i data-lucide="users" class="icon text-primary"></i>
+                <span class="text-gray-200">200+ Happy Clients</span>
+              </div>
+              <div class="flex items-center space-x-4">
+                <i data-lucide="languages" class="icon text-primary"></i>
+                <span class="text-gray-200">English & Spanish</span>
+              </div>
+              <div class="flex items-center space-x-4">
+                <i data-lucide="shield" class="icon text-primary"></i>
+                <span class="text-gray-200">100% Secure</span>
+              </div>
+              <div class="flex items-center space-x-4">
+                <i data-lucide="zap" class="icon text-primary"></i>
+                <span class="text-gray-200">Fast Delivery</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Section -->
+    <section class="py-16 px-4">
+      <div class="container text-center">
+        <h3 class="text-2xl font-bold mb-8 text-primary">Connect With Me</h3>
+        <div class="flex justify-center space-x-8">
+          <a href="#" class="social-icon">
+            <i data-lucide="github" class="icon"></i>
+          </a>
+          <a href="#" class="social-icon social-linkedin">
+            <i data-lucide="linkedin" class="icon"></i>
+          </a>
+          <a href="#" class="social-icon social-twitter">
+            <i data-lucide="twitter" class="icon"></i>
+          </a>
+          <a href="#" class="social-icon social-instagram">
+            <i data-lucide="instagram" class="icon"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i data-lucide="globe" class="icon"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Projects Section -->
+    <section class="py-20 px-4 bg-dark-secondary">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4 text-primary">Recent Projects</h2>
+          <p class="text-gray-300 text-lg">
+            Showcasing my latest WordPress development work
+          </p>
+        </div>
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          id="projects-grid"
+        >
+          <!-- Projects will be populated by JavaScript -->
+        </div>
+        <div class="text-center mt-12">
+          <button
+            class="btn-primary px-8 py-4 text-lg font-semibold rounded-lg"
+          >
+            View All Projects
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 px-4">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4 text-primary">My Services</h2>
+          <p class="text-gray-300 text-lg">
+            Professional WordPress solutions tailored to your needs
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="service-card">
+            <i data-lucide="code-2" class="icon-lg text-primary mb-6"></i>
+            <h3 class="text-xl font-bold mb-4">Custom WordPress Development</h3>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Bespoke theme development</li>
+              <li>• Advanced functionality integration</li>
+              <li>• Performance optimization</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <i data-lucide="palette" class="icon-lg text-primary mb-6"></i>
+            <h3 class="text-xl font-bold mb-4">Website Design & Redesign</h3>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Modern, responsive designs</li>
+              <li>• UX/UI optimization</li>
+              <li>• Brand-focused aesthetics</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <i data-lucide="zap" class="icon-lg text-primary mb-6"></i>
+            <h3 class="text-xl font-bold mb-4">Plugin Development</h3>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Custom plugin creation</li>
+              <li>• Third-party integrations</li>
+              <li>• API development</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <i data-lucide="shield" class="icon-lg text-primary mb-6"></i>
+            <h3 class="text-xl font-bold mb-4">Security & Maintenance</h3>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Security hardening</li>
+              <li>• Regular updates & backups</li>
+              <li>• Malware cleanup</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <i data-lucide="users" class="icon-lg text-primary mb-6"></i>
+            <h3 class="text-xl font-bold mb-4">E-commerce Solutions</h3>
+            <ul class="text-gray-300 space-y-2">
+              <li>• WooCommerce setup</li>
+              <li>• Payment gateway integration</li>
+              <li>• Inventory management</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <i data-lucide="headphones" class="icon-lg text-primary mb-6"></i>
+            <h3 class="text-xl font-bold mb-4">Support & Consultation</h3>
+            <ul class="text-gray-300 space-y-2">
+              <li>• 24/7 technical support</li>
+              <li>• WordPress training</li>
+              <li>• Strategy consultation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-4 bg-dark-secondary">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4 text-primary">
+            Client Testimonials
+          </h2>
+          <p class="text-gray-300 text-lg">
+            What my clients say about working with me
+          </p>
+        </div>
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          id="testimonials-grid"
+        >
+          <!-- Testimonials will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 px-4">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4 text-primary">Pricing Plans</h2>
+          <p class="text-gray-300 text-lg">
+            Choose the perfect package for your project
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="pricing-card">
+            <h3 class="text-2xl font-bold mb-4">Starter</h3>
+            <div class="text-4xl font-bold mb-6 text-primary">
+              $299<span class="text-lg text-gray-400">/month</span>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center">
+                <i data-lucide="check" class="icon text-primary mr-3"></i>
+                WordPress Setup
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="icon text-primary mr-3"></i>
+                Basic Theme Customization
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="icon text-primary mr-3"></i>
+                5 Pages
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="icon text-primary mr-3"></i>
+                Basic SEO Setup
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="icon text-primary mr-3"></i>
+                Email Support
+              </li>
+            </ul>
+            <button class="btn-secondary w-full py-3 rounded-lg">
+              Order Now
+            </button>
+          </div>
+          <div class="pricing-card pricing-card-featured relative">
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+              <span
+                class="bg-primary text-dark px-4 py-1 rounded-full text-sm font-bold"
+                >Most Popular</span
+              >
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Professional</h3>
+            <div class="text-4xl font-bold mb-6 text-primary">
+              $699<span class="text-lg text-gray-400">/month</span>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center">
+                <i data-lucide="check" class="icon text-primary mr-3"></i>
+                Custom Theme Development
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="icon text-primary mr-3"></i>
+                Unlimited Pages
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="icon text-primary mr-3"></i>
+                Advanced SEO
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="icon text-primary mr-3"></i>
+                E-commerce Integration
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="icon text-primary mr-3"></i>
+                Priority Support
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="icon text-primary mr-3"></i>
+                Security Setup
+              </li>
+            </ul>
+            <button class="btn-primary w-full py-3 rounded-lg">
+              Order Now
+            </button>
+          </div>
+          <div class="pricing-card">
+            <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
+            <div class="text-4xl font-bold mb-6 text-primary">
+              $1299<span class="text-lg text-gray-400">/month</span>
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center">
+                <i data-lucide="check" class="icon text-primary mr-3"></i>
+                Everything in Professional
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="icon text-primary mr-3"></i>
+                Custom Plugin Development
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="icon text-primary mr-3"></i>
+                Advanced Integrations
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="icon text-primary mr-3"></i>
+                Performance Optimization
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="icon text-primary mr-3"></i>
+                24/7 Phone Support
+              </li>
+            </ul>
+            <button class="btn-secondary w-full py-3 rounded-lg">
+              Order Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 px-4 bg-dark-secondary">
+      <div class="container">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4 text-primary">Get In Touch</h2>
+          <p class="text-gray-300 text-lg">
+            Ready to start your WordPress project? Let's discuss your needs
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-bold mb-8 text-primary">
+              Contact Information
+            </h3>
+            <div class="space-y-6">
+              <div class="flex items-center space-x-4">
+                <i data-lucide="mail" class="icon text-primary"></i>
+                <span class="text-gray-300">alex@wpexpert.com</span>
+              </div>
+              <div class="flex items-center space-x-4">
+                <i data-lucide="phone" class="icon text-primary"></i>
+                <span class="text-gray-300">+1 (555) 123-4567</span>
+              </div>
+              <div class="flex items-center space-x-4">
+                <i data-lucide="message-circle" class="icon text-primary"></i>
+                <span class="text-gray-300">WhatsApp: +1 (555) 123-4567</span>
+              </div>
+              <div class="flex items-center space-x-4">
+                <i data-lucide="map-pin" class="icon text-primary"></i>
+                <span class="text-gray-300">San Francisco, CA</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <form class="space-y-6" id="contact-form">
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-300 mb-2"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="form-input"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-300 mb-2"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="form-input"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="package"
+                  class="block text-sm font-medium text-gray-300 mb-2"
+                  >Select Package</label
+                >
+                <select id="package" class="form-input">
+                  <option value="">Choose a package</option>
+                  <option value="starter">Starter - $299/month</option>
+                  <option value="professional">
+                    Professional - $699/month
+                  </option>
+                  <option value="enterprise">Enterprise - $1299/month</option>
+                  <option value="custom">Custom Project</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-300 mb-2"
+                  >Project Details</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="form-input resize-none"
+                  placeholder="Tell me about your project..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-primary w-full py-3 rounded-lg">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 bg-dark border-t border-gray-800">
+      <div class="container text-center">
+        <p class="text-gray-400">
+          &copy; 2025 Alex Morgan - WordPress Expert. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize Lucide icons
+      document.addEventListener("DOMContentLoaded", function () {
+        lucide.createIcons();
+
+        // Populate projects
+        const projects = [
+          {
+            title: "TechCorp Enterprise Website",
+            description:
+              "Complete WordPress redesign for a Fortune 500 technology company with custom theme development and advanced functionality.",
+            image:
+              "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600",
+            category: "Corporate Website",
+            technologies: ["WordPress", "PHP", "MySQL", "JavaScript", "SCSS"],
+            features: [
+              "Custom theme development",
+              "Multi-language support",
+              "Advanced search functionality",
+              "Performance optimization",
+            ],
+            liveUrl: "#",
+            caseStudyUrl: "#",
+            completionDate: "December 2024",
+            duration: "3 months",
+          },
+          {
+            title: "EcoShop E-commerce Platform",
+            description:
+              "Full-featured WooCommerce store for sustainable products with custom payment integration and inventory management.",
+            image:
+              "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600",
+            category: "E-commerce",
+            technologies: [
+              "WooCommerce",
+              "Stripe API",
+              "PayPal",
+              "Custom Plugins",
+            ],
+            features: [
+              "Custom WooCommerce theme",
+              "Multiple payment gateways",
+              "Inventory management system",
+              "Customer loyalty program",
+            ],
+            liveUrl: "#",
+            caseStudyUrl: "#",
+            completionDate: "November 2024",
+            duration: "2 months",
+          },
+          {
+            title: "HealthCare Pro Portal",
+            description:
+              "HIPAA-compliant patient portal with appointment booking, secure messaging, and medical records management.",
+            image:
+              "https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=600",
+            category: "Healthcare",
+            technologies: [
+              "WordPress",
+              "Custom Plugins",
+              "SSL",
+              "HIPAA Compliance",
+            ],
+            features: [
+              "Patient appointment system",
+              "Secure file sharing",
+              "HIPAA compliance",
+              "Role-based access control",
+            ],
+            liveUrl: "#",
+            caseStudyUrl: "#",
+            completionDate: "October 2024",
+            duration: "4 months",
+          },
+          {
+            title: "Creative Agency Portfolio",
+            description:
+              "Stunning portfolio website for a creative agency with interactive galleries and smooth animations.",
+            image:
+              "https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=600",
+            category: "Portfolio",
+            technologies: ["WordPress", "GSAP", "CSS3", "JavaScript"],
+            features: [
+              "Interactive portfolio gallery",
+              "Smooth scroll animations",
+              "Contact form integration",
+              "SEO optimization",
+            ],
+            liveUrl: "#",
+            caseStudyUrl: "#",
+            completionDate: "September 2024",
+            duration: "6 weeks",
+          },
+          {
+            title: "Restaurant Chain Management",
+            description:
+              "Multi-location restaurant website with online ordering, reservation system, and franchise management.",
+            image:
+              "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=600",
+            category: "Restaurant",
+            technologies: [
+              "WordPress",
+              "WooCommerce",
+              "Booking System",
+              "Multi-site",
+            ],
+            features: [
+              "Online ordering system",
+              "Table reservation",
+              "Multi-location management",
+              "Menu management system",
+            ],
+            liveUrl: "#",
+            caseStudyUrl: "#",
+            completionDate: "August 2024",
+            duration: "2.5 months",
+          },
+          {
+            title: "Educational Platform LMS",
+            description:
+              "Learning Management System for online courses with student progress tracking and certification system.",
+            image:
+              "https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?auto=compress&cs=tinysrgb&w=600",
+            category: "Education",
+            technologies: [
+              "WordPress",
+              "LearnDash",
+              "Custom Plugins",
+              "Video Integration",
+            ],
+            features: [
+              "Course management system",
+              "Student progress tracking",
+              "Certificate generation",
+              "Video streaming integration",
+            ],
+            liveUrl: "#",
+            caseStudyUrl: "#",
+            completionDate: "July 2024",
+            duration: "3.5 months",
+          },
+        ];
+
+        const projectsGrid = document.getElementById("projects-grid");
+
+        projects.forEach((project) => {
+          const projectCard = document.createElement("div");
+          projectCard.className = "project-card";
+
+          projectCard.innerHTML = `
+                    <div class="relative">
+                        <img 
+                            src="${project.image}" 
+                            alt="${project.title}"
+                            class="project-image"
+                        />
+                        <div class="project-overlay">
+                            <div class="text-white">
+                                <div class="text-sm text-primary font-semibold mb-2">${
+                                  project.category
+                                }</div>
+                                <div class="text-sm text-gray-300">Completed: ${
+                                  project.completionDate
+                                }</div>
+                                <div class="text-sm text-gray-300">Duration: ${
+                                  project.duration
+                                }</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h3 class="text-xl font-bold text-white mb-2">${
+                          project.title
+                        }</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">${
+                          project.description
+                        }</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4 class="text-sm font-semibold text-primary mb-2">Key Features:</h4>
+                        <ul class="text-gray-300 text-sm space-y-1">
+                            ${project.features
+                              .map((feature) => `<li>• ${feature}</li>`)
+                              .join("")}
+                        </ul>
+                    </div>
+                    
+                    <div class="project-tech-stack mb-4">
+                        ${project.technologies
+                          .map(
+                            (tech) => `<span class="tech-tag">${tech}</span>`
+                          )
+                          .join("")}
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="${project.liveUrl}" class="project-link">
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                            Live Site
+                        </a>
+                        <a href="${project.caseStudyUrl}" class="project-link">
+                            <i data-lucide="file-text" class="w-4 h-4"></i>
+                            Case Study
+                        </a>
+                    </div>
+                `;
+
+          projectsGrid.appendChild(projectCard);
+        });
+
+        // Populate testimonials
+        const testimonials = [
+          {
+            name: "Sarah Johnson",
+            country: "USA",
+            rating: 5,
+            image:
+              "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200",
+            feedback:
+              "Alex transformed our outdated website into a modern, high-converting platform. Exceptional work!",
+          },
+          {
+            name: "Miguel Rodriguez",
+            country: "Spain",
+            rating: 5,
+            image:
+              "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=200",
+            feedback:
+              "Professional, reliable, and delivered beyond expectations. Our sales increased 40% after the redesign.",
+          },
+          {
+            name: "Emma Chen",
+            country: "Canada",
+            rating: 5,
+            image:
+              "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=200",
+            feedback:
+              "Fast turnaround, great communication, and stunning results. Highly recommend Alex for WordPress projects.",
+          },
+          {
+            name: "David Thompson",
+            country: "UK",
+            rating: 5,
+            image:
+              "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=200",
+            feedback:
+              "Alex solved complex technical issues that other developers couldn't handle. True WordPress expert!",
+          },
+          {
+            name: "Lisa Martinez",
+            country: "Mexico",
+            rating: 5,
+            image:
+              "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200",
+            feedback:
+              "Amazing attention to detail and perfect execution. Our e-commerce site performs flawlessly.",
+          },
+          {
+            name: "James Wilson",
+            country: "Australia",
+            rating: 5,
+            image:
+              "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=200",
+            feedback:
+              "Outstanding service from start to finish. Alex is now our go-to WordPress developer.",
+          },
+          {
+            name: "Anna Kowalski",
+            country: "Poland",
+            rating: 5,
+            image:
+              "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=200",
+            feedback:
+              "Incredible problem-solving skills and innovative solutions. Couldn't be happier with the results.",
+          },
+          {
+            name: "Robert Lee",
+            country: "Singapore",
+            rating: 5,
+            image:
+              "https://images.pexels.com/photos/1043473/pexels-photo-1043473.jpeg?auto=compress&cs=tinysrgb&w=200",
+            feedback:
+              "Alex's expertise in WordPress is unmatched. Delivered exactly what we needed, on time and on budget.",
+          },
+          {
+            name: "Sophie Dubois",
+            country: "France",
+            rating: 5,
+            image:
+              "https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=200",
+            feedback:
+              "Professional, creative, and highly skilled. Our website now perfectly represents our brand.",
+          },
+        ];
+
+        const testimonialsGrid = document.getElementById("testimonials-grid");
+
+        testimonials.forEach((testimonial) => {
+          const testimonialCard = document.createElement("div");
+          testimonialCard.className = "testimonial-card";
+
+          const stars = Array(testimonial.rating)
+            .fill()
+            .map(() => "★")
+            .join("");
+
+          testimonialCard.innerHTML = `
+                    <div class="flex items-center mb-4">
+                        <img 
+                            src="${testimonial.image}" 
+                            alt="${testimonial.name}"
+                            class="w-16 h-16 rounded-full object-cover mr-4"
+                        />
+                        <div>
+                            <h4 class="font-bold text-white">${testimonial.name}</h4>
+                            <p class="text-gray-400 text-sm">${testimonial.country}</p>
+                            <div class="flex mt-1 text-yellow-400">
+                                ${stars}
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">"${testimonial.feedback}"</p>
+                `;
+
+          testimonialsGrid.appendChild(testimonialCard);
+        });
+
+        // Re-initialize Lucide icons after dynamic content is added
+        lucide.createIcons();
+
+        // Handle form submission
+        const contactForm = document.getElementById("contact-form");
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(contactForm);
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const packageType = document.getElementById("package").value;
+          const message = document.getElementById("message").value;
+
+          // Simple form validation
+          if (!name || !email || !message) {
+            alert("Please fill in all required fields.");
+            return;
+          }
+
+          // Simulate form submission
+          alert(
+            `Thank you, ${name}! Your message has been sent. I'll get back to you soon.`
+          );
+          contactForm.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+
+        // Add scroll-based animations
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
+            }
+          });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document
+          .querySelectorAll(
+            ".service-card, .testimonial-card, .pricing-card, .project-card"
+          )
+          .forEach((card) => {
+            card.style.opacity = "0";
+            card.style.transform = "translateY(30px)";
+            card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+            observer.observe(card);
+          });
+      });
+    </script>
+  </body>
+</html>
